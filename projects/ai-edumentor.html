@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI EduMentor · 김경림 포트폴리오</title>
+  <link rel="stylesheet" href="../assets/styles/base.css">
+  <link rel="stylesheet" href="../assets/styles/project.css">
+</head>
+<body class="project-page" data-screen-label="Project AI EduMentor">
+
+<nav class="top-nav">
+  <a href="../index.html" class="back-link">← Back to portfolio</a>
+  <a href="../index.html" class="top-nav-brand">kim.kyungrim</a>
+  <a href="../index.html#contact" class="back-link">contact →</a>
+</nav>
+
+<header class="p-header">
+  <div class="container">
+    <div class="p-meta">
+      <span>Project 03</span>
+      <span class="divider">·</span>
+      <span>과학기술정보통신부 공모전 · 2026</span>
+      <span class="divider">·</span>
+      <span>AI Agent · Government Project</span>
+    </div>
+    <h1 class="p-title">AI <em class="italic">EduMentor.</em></h1>
+    <p class="p-tagline">"국비 훈련(KDT) 학습자의 완주를 돕는 AI 에이전트"</p>
+    <div class="p-tags">
+      <span class="p-tag">AI 서비스 기획</span>
+      <span class="p-tag">정부과제</span>
+      <span class="p-tag">Agent Cycle</span>
+      <span class="p-tag">Education × Data</span>
+      <span class="p-tag">과학기술정보통신부 공모전</span>
+    </div>
+  </div>
+
+  <div class="container">
+    <!-- 🍏 Live Site 링크 -->
+    <div class="p-live-row">
+      <div class="p-live-info">
+        <span class="p-live-dot"></span>
+        <span class="p-live-label">지금 배포됨</span>
+        <span class="p-live-url">kyungrim-kim.github.io/ai-edumentor/</span>
+      </div>
+      <a href="https://kyungrim-kim.github.io/ai-edumentor/" target="_blank" rel="noopener" class="p-live-btn">
+        🔗 라이브 사이트 보기 <span class="arrow">↗</span>
+      </a>
+    </div>
+
+    <div class="p-cover">
+      <img src="../assets/ai_edumentor/edu_1.jpg" alt="AI EduMentor - AI 에이전트로 일상을 바꿉니다">
+    </div>
+  </div>
+</header>
+
+<div class="container">
+  <div class="p-info">
+    <div class="p-info-item">
+      <div class="lbl">Timeline</div>
+      <div class="val">2026 · 공모전 제출</div>
+    </div>
+    <div class="p-info-item">
+      <div class="lbl">My Role</div>
+      <ul class="val-list">
+        <li>· 교육 문제 정의</li>
+        <li>· Agent workflow 설계</li>
+        <li>· 제안서 · 발표 자료 제작</li>
+        <li>· 시뮬레이터 콘텐츠 기획</li>
+      </ul>
+    </div>
+    <div class="p-info-item">
+      <div class="lbl">Deliverables</div>
+      <ul class="val-list">
+        <li>· 정부과제 제안서</li>
+        <li>· Agent 시뮬레이터 v1.0</li>
+        <li>· 8주 A/B 실증 모델</li>
+        <li>· 4단계 확장 로드맵</li>
+      </ul>
+    </div>
+    <div class="p-info-item">
+      <div class="lbl">Live Site</div>
+      <div class="val"><a href="https://kyungrim-kim.github.io/ai-edumentor/" target="_blank">kyungrim-kim.github.io ↗</a></div>
+      <div class="lbl" style="margin-top: 16px;">Stack</div>
+      <div class="val" style="font-size: 0.9rem; font-family: var(--p-font-mono); color: var(--p-text-2);">RAG · HITL · Kakao API</div>
+    </div>
+  </div>
+</div>
+
+<!-- 01 Problem -->
+<section class="p-section">
+  <div class="container">
+    <div class="p-section-head">
+      <div class="p-section-num">01 / Problem</div>
+      <h2>왜 학습자가 <em>중간에</em> 멈추는가.</h2>
+    </div>
+    <div class="p-body">
+      <div></div>
+      <div>
+        <p>국비 훈련(KDT · K-Digital Training)은 청년의 디지털 직무 전환을 지원하는 대표 정책이지만, 완주하지 못하고 이탈하는 학습자가 <strong>매년 급증</strong>하고 있습니다. 이탈 신호를 조기에 감지하고 개별적으로 개입할 수 있는 시스템이 부재한 상황입니다.</p>
+
+        <div class="kpi-grid">
+          <div class="kpi-card warn">
+            <div class="kpi-tag">2021 → 2024</div>
+            <div class="kpi-num warn"><em>5×</em></div>
+            <div class="kpi-desc">중도 이탈자 5배 증가<br><strong>681명 → 3,485명</strong></div>
+            <div class="kpi-source">고용노동부 · KDT 통계</div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-tag">개입 시점</div>
+            <div class="kpi-num"><em>0</em></div>
+            <div class="kpi-desc">이탈 <strong>이전</strong> 개별 개입 시스템 부재<br>대부분 사후 통계 집계만 이뤄짐</div>
+            <div class="kpi-source">현장 조사 · 2025</div>
+          </div>
+          <div class="kpi-card accent">
+            <div class="kpi-tag">Approach</div>
+            <div class="kpi-num"><em>4</em><span class="unit">step</span></div>
+            <div class="kpi-desc">Perceive → Reason → Plan → Act<br>AI 에이전트 사이클로 재구조화</div>
+            <div class="kpi-source">본 프로젝트 제안</div>
+          </div>
+        </div>
+
+        <div class="p-callout">
+          "학습자는 이탈 <em class="italic">직전</em>에 이미 여러 신호를 남긴다. 접속이 뜸해지고, 오답이 반복되고, 과제 제출이 지연된다. 데이터는 있는데 개입은 없다."
+          <span class="cite">— 프로젝트 문제 정의 · 2026</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 02 Approach - Agent Cycle -->
+<section class="p-section" style="background: var(--p-bg-soft); margin: 0;">
+  <div class="container">
+    <div class="p-section-head">
+      <div class="p-section-num">02 / Approach</div>
+      <h2>4단계 <em>Agent Cycle.</em></h2>
+    </div>
+    <div class="p-body">
+      <div></div>
+      <div>
+        <p>학습자별 이상 신호(오답 패턴, 학습 속도, 접속 빈도)를 데이터로 감지하고, <em class="italic">Perceive → Reason → Plan → Act</em> 4단계 사이클로 자동 개입합니다. 사람이 확인해야 할 지점(HITL · Human-in-the-loop)만 코치에게 넘기는 구조입니다.</p>
+      </div>
+    </div>
+
+    <div class="container-narrow" style="margin-top: 20px;">
+      <div class="cycle-diagram">
+        <div class="cycle-step">
+          <div class="step-num">01</div>
+          <div class="step-title">감지</div>
+          <div class="step-en">Perceive</div>
+          <div class="step-desc">접속 빈도 · 오답 패턴 · 학습 속도 · 과제 지연을 실시간으로 데이터화</div>
+          <div class="step-arrow">→</div>
+        </div>
+        <div class="cycle-step">
+          <div class="step-num">02</div>
+          <div class="step-title">판단</div>
+          <div class="step-en">Reason</div>
+          <div class="step-desc">이탈 위험 / 학습 정체 / 우수 진행 3-tier로 분류 · 원인 추론</div>
+          <div class="step-arrow">→</div>
+        </div>
+        <div class="cycle-step">
+          <div class="step-num">03</div>
+          <div class="step-title">계획</div>
+          <div class="step-en">Plan</div>
+          <div class="step-desc">Tier별 개입 시나리오 선택 (RAG 복습 · HITL 코치 · 챌린지 제안)</div>
+          <div class="step-arrow">→</div>
+        </div>
+        <div class="cycle-step">
+          <div class="step-num">04</div>
+          <div class="step-title">실행</div>
+          <div class="step-en">Act</div>
+          <div class="step-desc">카카오톡 채널로 개별 콘텐츠 자동 발송 · 감사 로그 기록</div>
+          <div class="step-arrow">→</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="p-body" style="margin-top: 60px;">
+      <div></div>
+      <div>
+        <h3 style="font-family: var(--p-font-sans); font-weight: 600; font-size: 1.3rem; letter-spacing: -0.02em; margin: 0 0 20px; color: var(--p-text);">위험도별 <em style="color: var(--p-mint); font-style: normal;">3-Tier</em> 개입 전략</h3>
+        <p style="max-width: 720px;">전체 학습자를 동일하게 다루지 않습니다. 위험 수준별로 개입의 <strong>강도와 형태</strong>를 다르게 설계했습니다.</p>
+
+        <div class="tier-grid">
+          <div class="tier-card tier-warn">
+            <div class="tier-label">Tier 1 · 이탈 위험</div>
+            <div class="tier-title">심층 개입 (HITL)</div>
+            <div class="tier-desc">3일 이상 미접속 · 반복적 오답 · 과제 미제출 상태의 학습자. AI가 원인을 추론해 <strong>사람 코치</strong>에게 인계합니다.</div>
+            <div class="tier-action">
+              <strong>Action</strong>코치 상담 예약 + 맞춤 복습 팩
+            </div>
+          </div>
+          <div class="tier-card tier-mid">
+            <div class="tier-label">Tier 2 · 학습 정체</div>
+            <div class="tier-title">RAG 복습 자동 발송</div>
+            <div class="tier-desc">이해도가 떨어지지만 접속은 유지 중. 헤매고 있는 개념을 <strong>맞춤 RAG 콘텐츠</strong>로 카톡 발송합니다.</div>
+            <div class="tier-action">
+              <strong>Action</strong>취약 개념 카드뉴스 3장 발송
+            </div>
+          </div>
+          <div class="tier-card tier-good">
+            <div class="tier-label">Tier 3 · 우수 진행</div>
+            <div class="tier-title">챌린지 · 심화 제안</div>
+            <div class="tier-desc">진도와 이해도가 안정적. 몰입을 유지하도록 <strong>심화 챌린지</strong>와 프로젝트 미션을 제안합니다.</div>
+            <div class="tier-action">
+              <strong>Action</strong>선택 프로젝트 · 커뮤니티 매칭
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 03 Result -->
+<section class="p-section">
+  <div class="container">
+    <div class="p-section-head">
+      <div class="p-section-num">03 / Result</div>
+      <h2>무엇을 만들었는가.</h2>
+    </div>
+    <div class="p-body">
+      <div></div>
+      <div>
+        <p>공모전 제출을 위해 <strong>제안서 · Agent 시뮬레이터 v1.0 · 실증 모델 · 확장 로드맵</strong>을 통합 완성했습니다.</p>
+        <ul>
+          <li>과학기술정보통신부 공모전 <strong>제안서 최종 제출</strong></li>
+          <li>AI 에이전트 시뮬레이터 v1.0 MVP 기획 완료 — 실제 현장 시나리오 <strong>3종</strong> (이탈 위험 · 학습 정체 · 우수 진행)</li>
+          <li>8주 A/B 실증 모델 설계 · <strong>약 100명 규모</strong> · 재접속률 · 중도탈락률 · 과제 완료율 지표</li>
+          <li>4단계 확장 로드맵 (MVP 실증 → 효과 검증 → 접근성 확대 → 운영 표준화) — 12개월+</li>
+          <li>데이터 기반 <em class="italic">선제 개입</em>으로 KDT 훈련 완주율 향상 목표</li>
+        </ul>
+
+        <div class="kpi-grid cols-4" style="margin-top: 40px;">
+          <div class="kpi-card">
+            <div class="kpi-tag">Simulator</div>
+            <div class="kpi-num"><em>3</em><span class="unit">종</span></div>
+            <div class="kpi-desc">현장 시나리오<br>학습자 프로파일</div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-tag">Pilot</div>
+            <div class="kpi-num"><em>8</em><span class="unit">주</span></div>
+            <div class="kpi-desc">A/B 실증 설계<br>~100명 규모</div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-tag">Roadmap</div>
+            <div class="kpi-num"><em>4</em><span class="unit">단계</span></div>
+            <div class="kpi-desc">MVP → 검증 →<br>확대 → 표준화</div>
+          </div>
+          <div class="kpi-card accent">
+            <div class="kpi-tag">Est. Result</div>
+            <div class="kpi-num"><em>71</em><span class="unit">%</span></div>
+            <div class="kpi-desc">시뮬레이터 상<br>예측 복귀율</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 04 Live Site Preview -->
+<section class="p-embed-section" style="background: var(--p-bg-soft);">
+  <div class="container">
+    <div class="p-embed-head">
+      <div>
+        <div class="p-embed-label">/// live.preview</div>
+        <h2 style="font-family: var(--p-font-sans); font-weight: 600; font-size: clamp(1.6rem, 2.6vw, 2rem); letter-spacing: -0.02em; margin: 4px 0 0;">직접 사용해볼 수 있는 <em style="color: var(--p-mint); font-style: normal;">Simulator.</em></h2>
+      </div>
+      <span class="p-embed-note">아래는 배포된 실제 사이트입니다</span>
+    </div>
+    <div class="p-embed-frame">
+      <div class="browser-bar">
+        <div class="browser-dots"><span></span><span></span><span></span></div>
+        <div class="browser-url">kyungrim-kim.github.io/ai-edumentor/</div>
+      </div>
+      <iframe src="https://kyungrim-kim.github.io/ai-edumentor/" loading="lazy" title="AI EduMentor Live Preview"
+              sandbox="allow-scripts allow-same-origin allow-forms allow-popups"></iframe>
+    </div>
+
+    <div style="margin-top: 24px; text-align: center;">
+      <a href="https://kyungrim-kim.github.io/ai-edumentor/" target="_blank" rel="noopener" class="p-live-btn">
+        🔗 새 창에서 라이브 사이트 열기 <span class="arrow">↗</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- 05 Gallery -->
+<section class="p-section" style="background: var(--p-bg-2); margin: 0;">
+  <div class="container">
+    <div class="p-section-head">
+      <div class="p-section-num">05 / Gallery</div>
+      <h2>작업물 모아보기.</h2>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item" onclick="showLightbox('../assets/ai_edumentor/edu_12.jpg')">
+        <div class="thumb"><img src="../assets/ai_edumentor/edu_12.jpg" alt="문제 현황" loading="lazy"></div>
+        <div class="cap">01 · 문제 현황 — KDT 중도 탈락 5배 증가</div>
+      </div>
+      <div class="gallery-item" onclick="showLightbox('../assets/ai_edumentor/edu_1.jpg')">
+        <div class="thumb"><img src="../assets/ai_edumentor/edu_1.jpg" alt="메인" loading="lazy"></div>
+        <div class="cap">02 · 메인 — AI 에이전트로 일상을 바꿉니다</div>
+      </div>
+      <div class="gallery-item" onclick="showLightbox('../assets/ai_edumentor/edu_11.jpg')">
+        <div class="thumb"><img src="../assets/ai_edumentor/edu_11.jpg" alt="작동 방식" loading="lazy"></div>
+        <div class="cap">03 · 작동 방식 — 4단계 자동 개입 파이프라인</div>
+      </div>
+      <div class="gallery-item" onclick="showLightbox('../assets/ai_edumentor/edu_6.jpg')">
+        <div class="thumb"><img src="../assets/ai_edumentor/edu_6.jpg" alt="MVP 모듈 구성" loading="lazy"></div>
+        <div class="cap">04 · 기능 — MVP 모듈 구성 (대시보드·페이스메이커·학습 에이전트)</div>
+      </div>
+      <div class="gallery-item" onclick="showLightbox('../assets/ai_edumentor/edu_2.jpg')">
+        <div class="thumb"><img src="../assets/ai_edumentor/edu_2.jpg" alt="시뮬레이터" loading="lazy"></div>
+        <div class="cap">05 · 시뮬레이터 — 3종 학습자 프로파일 (김민준 이탈 위험)</div>
+      </div>
+      <div class="gallery-item" onclick="showLightbox('../assets/ai_edumentor/edu_3.jpg')">
+        <div class="thumb"><img src="../assets/ai_edumentor/edu_3.jpg" alt="시뮬레이터 진행" loading="lazy"></div>
+        <div class="cap">06 · 시뮬레이터 진행 — 실시간 판단 분석 및 카톡 개입</div>
+      </div>
+      <div class="gallery-item" onclick="showLightbox('../assets/ai_edumentor/edu_4.jpg')">
+        <div class="thumb"><img src="../assets/ai_edumentor/edu_4.jpg" alt="개입 방식" loading="lazy"></div>
+        <div class="cap">07 · 개입 방식 상세 — RAG 복습 · HITL 코치 심층 케어</div>
+      </div>
+      <div class="gallery-item" onclick="showLightbox('../assets/ai_edumentor/edu_5.jpg')">
+        <div class="thumb"><img src="../assets/ai_edumentor/edu_5.jpg" alt="사이클 완료" loading="lazy"></div>
+        <div class="cap">08 · 사이클 완료 — 예측 복귀율 71%, 실행 결과 요약</div>
+      </div>
+      <div class="gallery-item" onclick="showLightbox('../assets/ai_edumentor/edu_9.jpg')">
+        <div class="thumb"><img src="../assets/ai_edumentor/edu_9.jpg" alt="정책 연계" loading="lazy"></div>
+        <div class="cap">09 · 정책 연계 — K-Digital Training · 내일배움카드 · HRD-Net</div>
+      </div>
+      <div class="gallery-item" onclick="showLightbox('../assets/ai_edumentor/edu_8.jpg')">
+        <div class="thumb"><img src="../assets/ai_edumentor/edu_8.jpg" alt="확장 로드맵" loading="lazy"></div>
+        <div class="cap">10 · 4단계 확장 로드맵 (12개월+)</div>
+      </div>
+      <div class="gallery-item" onclick="showLightbox('../assets/ai_edumentor/edu_10.jpg')">
+        <div class="thumb"><img src="../assets/ai_edumentor/edu_10.jpg" alt="안전 원칙" loading="lazy"></div>
+        <div class="cap">11 · 안전한 AI 개입 원칙 — PIPA · HITL · 감사 추적</div>
+      </div>
+      <div class="gallery-item" onclick="showLightbox('../assets/ai_edumentor/edu_7.jpg')">
+        <div class="thumb"><img src="../assets/ai_edumentor/edu_7.jpg" alt="파일럿" loading="lazy"></div>
+        <div class="cap">12 · 파일럿 — 8주 A/B 실증 모델 (약 100명 규모)</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 06 Learning -->
+<section class="learning-section">
+  <div class="container">
+    <div class="learning-card">
+      <div class="num">06 / Learning</div>
+      <p>교육 현장에서 관찰한 <em>"왜 학습자가 중간에 멈추는가"</em>라는 질문을 AI 시스템으로 <em>구조화</em>하는 경험이었습니다.</p>
+      <p style="color: rgba(255, 255, 255, 0.82); font-size: 1rem; line-height: 1.85; margin-top: 28px; font-weight: 400;">
+        ThinkWise · 청바지 프로젝트에서 확인한 <em style="color: #7EE0C2;">'좋은 정보'보다 '이해할 수 있는 흐름'</em>이라는 관점을, 이번 프로젝트에서는 <em style="color: #7EE0C2;">사람이 아닌 AI가 그 역할을 대신하도록</em> 구조화했습니다. 데이터로 감지하고 · 사람 언어로 판단하고 · 카톡으로 전달한다는 흐름은, 결국 지금까지 해온 '사용자 언어로 번역하기'의 확장이었습니다.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Nav to next -->
+<div class="container">
+  <div class="nav-projects">
+    <a href="cheongbaji.html" class="nav-project">
+      <div class="lbl">← 이전 프로젝트</div>
+      <div class="title">청바지 (NowYouth)</div>
+      <div class="sub">정부과제 · 모두의 창업 프로젝트 공모전 · 2026</div>
+    </a>
+    <a href="ai-education.html" class="nav-project">
+      <div class="lbl">다음 프로젝트 →</div>
+      <div class="title">보험 실무자 AI 활용 교육</div>
+      <div class="sub">프리랜서 강의 · 2026.05</div>
+    </a>
+  </div>
+</div>
+
+<footer>
+  <div>© 2026 Kim Kyung Rim · 김경림 Portfolio</div>
+</footer>
+
+<!-- Lightbox -->
+<div class="p-lightbox" id="lightbox" onclick="this.classList.remove('active')">
+  <button class="close">×</button>
+  <img id="lightbox-img" src="" alt="">
+</div>
+<script>
+  function showLightbox(src) {
+    document.getElementById('lightbox-img').src = src;
+    document.getElementById('lightbox').classList.add('active');
+  }
+</script>
+
+</body>
+</html>

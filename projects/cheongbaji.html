@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>청바지(NowYouth) · 김경림 포트폴리오</title>
+  <link rel="stylesheet" href="../assets/styles/base.css">
+  <link rel="stylesheet" href="../assets/styles/project.css">
+</head>
+<body class="project-page" data-screen-label="Project 청바지 NowYouth">
+
+<nav class="top-nav">
+  <a href="../index.html" class="back-link">← Back to portfolio</a>
+  <a href="../index.html" class="top-nav-brand">kim.kyungrim</a>
+  <a href="../index.html#contact" class="back-link">contact →</a>
+</nav>
+
+<header class="p-header">
+  <div class="container">
+    <div class="p-meta">
+      <span>Project 02</span>
+      <span class="divider">·</span>
+      <span>Government Grant · 2026</span>
+      <span class="divider">·</span>
+      <span>Service Design · MVP</span>
+    </div>
+    <h1 class="p-title">청바지 <em class="italic">NowYouth</em></h1>
+    <p class="p-tagline">"복지·활동·관계를 연결하는 65세 이상 시니어 라이프스타일 플랫폼"</p>
+    <div class="p-tags">
+      <span class="p-tag">서비스 기획</span>
+      <span class="p-tag">정부과제</span>
+      <span class="p-tag">시니어 UX</span>
+      <span class="p-tag">MVP 개발</span>
+      <span class="p-tag">공모전 · 모두의 창업 프로젝트</span>
+    </div>
+  </div>
+
+  <div class="container">
+    <!-- 🍏 Live Demo 링크 -->
+    <div class="p-live-row">
+      <div class="p-live-info">
+        <span class="p-live-dot"></span>
+        <span class="p-live-label">Live Demo</span>
+        <span class="p-live-url">mockup-app-khaki.vercel.app</span>
+      </div>
+      <a href="https://mockup-app-khaki.vercel.app/welcome" target="_blank" rel="noopener" class="p-live-btn">
+        🔗 데모 앱 열기 <span class="arrow">↗</span>
+      </a>
+    </div>
+
+    <div class="p-cover">
+      <img src="../assets/cheongbaji/cover.jpg" alt="청바지 소개 - 청춘은 바로 지금">
+    </div>
+  </div>
+</header>
+
+<div class="container">
+  <div class="p-info">
+    <div class="p-info-item">
+      <div class="lbl">Timeline</div>
+      <div class="val">2026 · 공모전 제출</div>
+    </div>
+    <div class="p-info-item">
+      <div class="lbl">My Role</div>
+      <ul class="val-list">
+        <li>· 서비스 기획 · 문제 정의</li>
+        <li>· MVP 화면 흐름 설계</li>
+        <li>· 홍보 영상 4종 기획</li>
+        <li>· 공모전 제안서 작성</li>
+      </ul>
+    </div>
+    <div class="p-info-item">
+      <div class="lbl">Deliverables</div>
+      <ul class="val-list">
+        <li>· AC 투자 기획서</li>
+        <li>· MVP 개발 계획서</li>
+        <li>· 4대 통합서비스 구현계획서</li>
+        <li>· 서비스 구현 실행계획서</li>
+      </ul>
+    </div>
+    <div class="p-info-item">
+      <div class="lbl">Live Demo</div>
+      <div class="val"><a href="https://mockup-app-khaki.vercel.app/welcome" target="_blank">mockup-app-khaki.vercel.app ↗</a></div>
+      <div class="lbl" style="margin-top: 16px;">Videos</div>
+      <div class="val" style="font-size: 0.9rem;">4편 (YouTube)</div>
+    </div>
+  </div>
+</div>
+
+<section class="p-section">
+  <div class="container">
+    <div class="p-section-head">
+      <div class="p-section-num">01 / Problem</div>
+      <h2>왜 이 서비스가 필요한가.</h2>
+    </div>
+    <div class="p-body">
+      <div></div>
+      <div>
+        <p>한국의 65세 이상 인구는 2024년 11월 <strong>1,024만 명</strong>을 돌파하여 전체 인구의 20%를 기록하였으며, 2036년 30% 도달이 전망됩니다. 그러나 시니어 세대의 실제 생활 문제는 <em class="italic">정보 격차 · 활동 격차 · 관계 격차</em>라는 세 축에서 오히려 심화되고 있습니다.</p>
+
+        <div class="kpi-grid">
+          <div class="kpi-card accent">
+            <div class="kpi-tag">인구 규모</div>
+            <div class="kpi-num"><em>1,024</em><span class="unit">만 명</span></div>
+            <div class="kpi-desc">65세 이상 인구 (2024.11)<br><strong>전체 인구의 20%</strong></div>
+            <div class="kpi-source">통계청 · 2024</div>
+          </div>
+          <div class="kpi-card warn">
+            <div class="kpi-tag">복지 사각</div>
+            <div class="kpi-num warn"><em>38.1</em><span class="unit">%</span></div>
+            <div class="kpi-desc">노인빈곤율<br>OECD 평균 13.1%의 <strong>약 3배</strong></div>
+            <div class="kpi-source">국회입법조사처 · 2024</div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-tag">디지털 활용</div>
+            <div class="kpi-num"><em>55.9</em><span class="unit">/100</span></div>
+            <div class="kpi-desc">스마트폰 활용 역량 점수<br>'접속은 가능, 활용은 어려운' 환경</div>
+            <div class="kpi-source">과학기술정보통신부 · 2023</div>
+          </div>
+        </div>
+
+        <ul>
+          <li><strong>복지 수급 격차:</strong> 2024년 기초연금 사각지대 <strong>42.2만 명</strong> · 문화누리카드 70세 이상 8.2%가 지원금을 전액 사용하지 못함.</li>
+          <li><strong>은퇴 후 생산활동 단절:</strong> 주된 일자리 퇴직 연령 <strong>평균 52.9세</strong> vs 국민연금 수급 <strong>63세</strong> → 약 10년의 '소득 크레바스'. 55~79세의 <strong>69.4%</strong>가 계속 근로를 희망.</li>
+          <li><strong>시니어 전용 디지털 플랫폼 부재:</strong> 스마트폰 보유율 94%를 상회하나 활용 역량은 55.9점. 대형 앱은 있지만 시니어 맞춤 흐름은 없음.</li>
+        </ul>
+
+        <div class="p-callout">
+          "국가 예산이 정작 필요한 곳에 쓰이지 못하고 매년 소멸되는 구조적 문제. 그 주원인은 복잡한 신청 절차와 정보 접근성 부족."
+          <span class="cite">— 국회입법조사처, 2024</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="p-section" style="background: var(--p-bg-soft); margin: 0;">
+  <div class="container">
+    <div class="p-section-head">
+      <div class="p-section-num">02 / Approach</div>
+      <h2>어떻게 풀었는가.</h2>
+    </div>
+    <div class="p-body">
+      <div></div>
+      <div>
+        <p>세 가지 구조적 격차를 단일 플랫폼에서 통합 해결하여, 시니어가 <em class="italic">복지 수혜자를 넘어 자기 주도적 사용자로</em> 전환되는 환경을 제공하기로 했습니다.</p>
+        <ul>
+          <li><strong>복지 큐레이션:</strong> 사용자가 최초 1회 기본 정보를 입력하면 공공데이터포털 복지 DB와 자동 매칭 → 개인별 수급 가능 혜택 리스트 생성. '1분 인터뷰'로 최대 월 130만원 상당 지원 가능성 점검.</li>
+          <li><strong>일자리 매칭:</strong> 매주 새 공고 약 300건 동기화. 인터뷰 후 본인 적합 Top-5만 추천 (AI 추천 엔진).</li>
+          <li><strong>우리 동 커뮤니티 · 품앗이:</strong> 동일 지역 시니어 간 상호 지원과 정보 공유. 지자체 및 노인인력개발원과 연계.</li>
+          <li><strong>활동 리워드:</strong> 인지 훈련 게임 · 걷기 · 문화 활동을 포인트로 환산. 편의점 · 약국 · 문화시설 리워드로 교환.</li>
+          <li><strong>시니어 친화 UX:</strong> 큰 글씨 · 음성 안내 · 보호자 대리 신청 · 금전 거래 차단 · 사회복지사 모니터링.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container-narrow" style="margin-top: 60px;">
+      <div style="font-family: var(--p-font-mono); font-size: 0.75rem; color: var(--p-mint); letter-spacing: 0.1em; margin-bottom: 16px; font-weight: 600;">/// 4대 통합 서비스 구조</div>
+      <div class="stack-diagram">
+        <div class="stack-row">
+          <div class="stack-idx">01</div>
+          <div class="stack-body">
+            <div class="stack-title">복지 큐레이션</div>
+            <div class="stack-desc">최초 1회 기본 정보 입력 → 공공데이터포털 복지 DB와 자동 매칭. '1분 인터뷰'로 개인별 수급 가능 혜택 리스트 생성.</div>
+            <div class="stack-metric">// 최대 월 130만원 상당 지원 매칭 · 47개+ 매칭 가능 제도</div>
+          </div>
+        </div>
+        <div class="stack-row">
+          <div class="stack-idx">02</div>
+          <div class="stack-body">
+            <div class="stack-title">일자리 매칭</div>
+            <div class="stack-desc">매주 새 공고를 동기화하고, 인터뷰 후 본인 적합 Top-5만 추천. 지자체 · 노인인력개발원과 연계.</div>
+            <div class="stack-metric">// 매주 300건 공고 동기화 · Top-5 AI 추천</div>
+          </div>
+        </div>
+        <div class="stack-row">
+          <div class="stack-idx">03</div>
+          <div class="stack-body">
+            <div class="stack-title">우리 동 커뮤니티 · 품앗이</div>
+            <div class="stack-desc">동일 지역 시니어 간 상호 지원과 정보 공유. 금전 거래 차단 · 사회복지사 모니터링으로 안전성 확보.</div>
+            <div class="stack-metric">// 지역 기반 · 사회복지사 모니터링</div>
+          </div>
+        </div>
+        <div class="stack-row">
+          <div class="stack-idx">04</div>
+          <div class="stack-body">
+            <div class="stack-title">활동 리워드</div>
+            <div class="stack-desc">인지 훈련 게임 · 걷기 · 문화 활동을 포인트로 환산. 편의점 · 약국 · 문화시설 리워드로 교환.</div>
+            <div class="stack-metric">// 편의점 · 약국 · 문화시설 파트너</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="p-section">
+  <div class="container">
+    <div class="p-section-head">
+      <div class="p-section-num">03 / Result</div>
+      <h2>무엇을 만들었는가.</h2>
+    </div>
+    <div class="p-body">
+      <div></div>
+      <div>
+        <p>공모전 제출을 위해 <strong>기획서 · MVP · 홍보 콘텐츠</strong>를 통합 완성했습니다.</p>
+        <ul>
+          <li>「모두의 창업 프로젝트」 공모전 최종 제출</li>
+          <li>AC 투자 기획서 · MVP 개발 계획서 · 4대통합서비스 구현계획서 완성</li>
+          <li>웹 데모 앱 프로토타입 배포 (실사용 가능한 인터랙션 흐름 구현)</li>
+          <li>홍보 영상 4종 기획·완성 (총 12분)</li>
+          <li>47개+ 매칭 가능 제도 · 매주 300건 공고 동기화 알고리즘 기획</li>
+        </ul>
+
+        <div class="kpi-grid cols-4" style="margin-top: 40px;">
+          <div class="kpi-card">
+            <div class="kpi-tag">서비스</div>
+            <div class="kpi-num"><em>4</em><span class="unit">축</span></div>
+            <div class="kpi-desc">복지 · 일자리<br>커뮤니티 · 리워드</div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-tag">기획서</div>
+            <div class="kpi-num"><em>4</em><span class="unit">종</span></div>
+            <div class="kpi-desc">AC · MVP<br>구현 · 실행 계획서</div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-tag">Video</div>
+            <div class="kpi-num"><em>4</em><span class="unit">편</span></div>
+            <div class="kpi-desc">소개 1편<br>시나리오 3편</div>
+          </div>
+          <div class="kpi-card accent">
+            <div class="kpi-tag">Live Demo</div>
+            <div class="kpi-num"><em>V1</em></div>
+            <div class="kpi-desc">Vercel 배포<br>실사용 가능 MVP</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Videos -->
+<section class="p-section" style="background: var(--p-bg-soft); margin: 0;">
+  <div class="container">
+    <div class="p-section-head">
+      <div class="p-section-num">04 / Videos</div>
+      <h2>4편의 홍보 영상.</h2>
+    </div>
+    <div class="p-body">
+      <div></div>
+      <div>
+        <p>서비스 자체의 소개 영상 1편과, 시니어 사용자 관점의 문제 상황을 스토리로 풀어낸 시나리오 영상 3편을 기획·제작했습니다. "설명" 이 아닌 "일상 속 장면" 을 통해 서비스의 필요성을 전달하는 것이 목표였습니다.</p>
+      </div>
+    </div>
+
+    <div class="video-grid">
+      <div>
+        <div class="video-embed">
+          <iframe src="https://www.youtube.com/embed/CZQ8y7fw4nQ" title="청바지 소개 영상" allowfullscreen></iframe>
+        </div>
+        <div class="video-card">
+          <div class="title">청바지 소개 (공모전 제출본)</div>
+          <div class="meta">3:43 · Service Introduction</div>
+        </div>
+      </div>
+      <div>
+        <div class="video-embed">
+          <iframe src="https://www.youtube.com/embed/1wkiTbLhaeM" title="보이스피싱 예방 영상" allowfullscreen></iframe>
+        </div>
+        <div class="video-card">
+          <div class="title">보이스피싱 예방</div>
+          <div class="meta">2:54 · Scenario</div>
+        </div>
+      </div>
+      <div>
+        <div class="video-embed">
+          <iframe src="https://www.youtube.com/embed/JQVjir4RfyA" title="노인일자리 참여 영상" allowfullscreen></iframe>
+        </div>
+        <div class="video-card">
+          <div class="title">노인일자리 참여</div>
+          <div class="meta">2:34 · Scenario</div>
+        </div>
+      </div>
+      <div>
+        <div class="video-embed">
+          <iframe src="https://www.youtube.com/embed/R7F4XGRg8FM" title="0원 나들이 영상" allowfullscreen></iframe>
+        </div>
+        <div class="video-card">
+          <div class="title">0원 나들이</div>
+          <div class="meta">2:21 · Scenario</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Live demo -->
+<section class="p-embed-section">
+  <div class="container">
+    <div class="p-embed-head">
+      <div>
+        <div class="p-embed-label">/// 05 · live.demo</div>
+        <h2 style="font-family: var(--p-font-sans); font-weight: 600; font-size: clamp(1.6rem, 2.6vw, 2rem); letter-spacing: -0.02em; margin: 4px 0 0;">직접 사용해볼 수 있는 <em style="color: var(--p-mint); font-style: normal;">MVP.</em></h2>
+      </div>
+      <span class="p-embed-note">시니어 눈높이 · 큰 글씨 · 1분 인터뷰</span>
+    </div>
+
+    <p style="font-size: 1.02rem; line-height: 1.85; color: var(--p-text-2); max-width: 720px; margin: 0 0 24px;">
+      기획서에 그친 프로토타입이 아니라, 실제로 인터랙션이 작동하는 웹 데모 앱을 배포했습니다. 시니어 눈높이의 큰 글씨 · 음성 안내 · 1분 인터뷰 · 4대 서비스 카드 UI가 모두 구현되어 있습니다.
+    </p>
+
+    <div class="p-embed-frame">
+      <div class="browser-bar">
+        <div class="browser-dots"><span></span><span></span><span></span></div>
+        <div class="browser-url">mockup-app-khaki.vercel.app/welcome</div>
+      </div>
+      <iframe src="https://mockup-app-khaki.vercel.app/welcome" loading="lazy" title="청바지 Live Demo"
+              sandbox="allow-scripts allow-same-origin allow-forms allow-popups"></iframe>
+    </div>
+
+    <div style="margin-top: 24px; text-align: center;">
+      <a href="https://mockup-app-khaki.vercel.app/welcome" target="_blank" rel="noopener" class="p-live-btn">
+        🔗 새 창에서 데모 앱 열기 <span class="arrow">↗</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Learning -->
+<section class="learning-section">
+  <div class="container">
+    <div class="learning-card">
+      <div class="num">06 / Learning</div>
+      <p>"사용자가 이해할 수 있는 언어"라는 저의 핵심 철학이 <em>시니어 UX 설계에서 가장 극단적으로 시험받은</em> 프로젝트였습니다.</p>
+      <p style="color: rgba(255, 255, 255, 0.82); font-size: 1rem; line-height: 1.85; margin-top: 28px; font-weight: 400;">
+        스마트폰 활용 역량 55.9점의 사용자를 위한 서비스는, 결국 <em style="color: #7EE0C2;">'가장 좋은 정보'</em>가 아니라 <em style="color: #7EE0C2;">'가장 이해하기 쉬운 흐름'</em>이어야 한다는 것을 다시 확인했습니다. 큰 글씨나 음성 안내 같은 기술적 배려보다 더 중요한 것은, 사용자가 '내가 이걸 할 수 있다' 는 확신을 가질 수 있는 flow 설계였습니다.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Nav to next -->
+<div class="container">
+  <div class="nav-projects">
+    <a href="thinkwise.html" class="nav-project">
+      <div class="lbl">← 이전 프로젝트</div>
+      <div class="title">ThinkWise SaaS 운영 & 사용자 교육</div>
+      <div class="sub">심테크시스템 · 2024–2026</div>
+    </a>
+    <a href="ai-edumentor.html" class="nav-project">
+      <div class="lbl">다음 프로젝트 →</div>
+      <div class="title">AI EduMentor</div>
+      <div class="sub">정부과제 · 과학기술정보통신부 공모전</div>
+    </a>
+  </div>
+</div>
+
+<footer>
+  <div>© 2026 Kim Kyung Rim · 김경림 Portfolio</div>
+</footer>
+
+</body>
+</html>
