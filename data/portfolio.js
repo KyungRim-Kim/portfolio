@@ -430,7 +430,7 @@ window.PORTFOLIO_DATA = {
       ],
       learning: "제 커리어의 원점입니다. '고객이 어디서 헤매는가'를 관찰하는 습관, 프로세스로 문제를 푸는 관점이 여기서 시작되었습니다.",
       gallery: [
-        { src: "assets/reception/reception_photo.jpg", caption: "01 · 선인자동차 서비스센터 리셉션 인수인계 자료" },
+        { src: "assets/reception/reception_photo.jpg", caption: "01 · 2017 Ford 서비스 엑셀런스 프로그램 수상 (평택, 2017)" },
       ],
     },
   ],
