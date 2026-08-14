@@ -60,6 +60,16 @@
             </span>
             <span class="btn-call-arrow" aria-hidden="true">→</span>
           </a>
+          <a href="assets/김경림_자기소개서.pdf" class="btn-call btn-call-doc" download aria-label="자기소개서 PDF 다운로드">
+            <span class="btn-call-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><polyline points="9 15 12 18 15 15"/></svg>
+            </span>
+            <span class="btn-call-body">
+              <span class="btn-call-lbl">자기소개서</span>
+              <span class="btn-call-num">PDF 다운로드</span>
+            </span>
+            <span class="btn-call-arrow" aria-hidden="true">↓</span>
+          </a>
           <span class="hero-cta-hint">함께 이야기해보고 싶다면 편하게 연락 주세요.</span>
         </div>
       </div>
@@ -211,6 +221,16 @@
           </span>
           <span class="btn-call-arrow" aria-hidden="true">→</span>
         </a>
+        <a href="assets/김경림_자기소개서.pdf" class="btn-call btn-call-lg btn-call-doc" download aria-label="자기소개서 PDF 다운로드">
+          <span class="btn-call-icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><polyline points="9 15 12 18 15 15"/></svg>
+          </span>
+          <span class="btn-call-body">
+            <span class="btn-call-lbl">자기소개서</span>
+            <span class="btn-call-num">PDF 다운로드</span>
+          </span>
+          <span class="btn-call-arrow" aria-hidden="true">↓</span>
+        </a>
       </div>
     </div>
   </div>
@@ -222,6 +242,40 @@
     <span class="footer-tag">SaaS Operations · Education Design · AI Workflow</span>
   </div>
 </footer>
+
+<!-- ── Built-by badge (fixed, bottom-right) ─────────────────── -->
+<button type="button" class="built-badge" id="built-badge" aria-label="이 사이트 제작 정보 열기">
+  <span class="built-badge-dot" aria-hidden="true"></span>
+  <span class="built-badge-text">
+    <span class="built-badge-line1">Designed &amp; built by</span>
+    <span class="built-badge-line2">Kyungrim</span>
+  </span>
+</button>
+
+<!-- ── Built-by modal ───────────────────────────────────────── -->
+<div class="built-modal" id="built-modal" role="dialog" aria-modal="true" aria-labelledby="built-modal-title" hidden>
+  <div class="built-modal-backdrop" data-close="1"></div>
+  <div class="built-modal-panel" role="document">
+    <button type="button" class="built-modal-close" aria-label="닫기" data-close="1">×</button>
+    <div class="built-modal-eyebrow mono">// colophon</div>
+    <h3 class="built-modal-title" id="built-modal-title">이 사이트는 직접 설계·제작했습니다.</h3>
+    <p class="built-modal-body">
+      기획부터 정보 구조, 시각 디자인, 문구, 코드까지 <em>김경림</em>이 직접 작업했습니다.
+      외주 없이 혼자 만들었고, 앞으로도 계속 다듬어갈 계획입니다.
+    </p>
+    <div class="built-modal-meta">
+      <div class="built-modal-meta-row">
+        <span class="built-modal-meta-label mono">tools</span>
+        <span class="built-modal-meta-value">Genspark · HTML / CSS · GitHub Pages</span>
+      </div>
+      <div class="built-modal-meta-row">
+        <span class="built-modal-meta-label mono">source</span>
+        <span class="built-modal-meta-value">kyungrim-kim.github.io/portfolio</span>
+      </div>
+    </div>
+    <div class="built-modal-foot mono">— Kyungrim, 2026</div>
+  </div>
+</div>
 
 <script src="assets/scripts/reveal.js"></script>
 <script>
@@ -379,6 +433,36 @@
   }
   window.addEventListener('scroll', updateActiveNav, { passive: true });
   updateActiveNav();
+
+  // ── Built-by modal
+  (function () {
+    const badge = document.getElementById('built-badge');
+    const modal = document.getElementById('built-modal');
+    if (!badge || !modal) return;
+
+    let lastFocus = null;
+
+    function openModal() {
+      lastFocus = document.activeElement;
+      modal.hidden = false;
+      document.body.style.overflow = 'hidden';
+      const closeBtn = modal.querySelector('.built-modal-close');
+      if (closeBtn) closeBtn.focus();
+    }
+    function closeModal() {
+      modal.hidden = true;
+      document.body.style.overflow = '';
+      if (lastFocus && lastFocus.focus) lastFocus.focus();
+    }
+
+    badge.addEventListener('click', openModal);
+    modal.addEventListener('click', (e) => {
+      if (e.target instanceof Element && e.target.dataset && e.target.dataset.close) closeModal();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !modal.hidden) closeModal();
+    });
+  })();
 </script>
 </body>
 </html>
